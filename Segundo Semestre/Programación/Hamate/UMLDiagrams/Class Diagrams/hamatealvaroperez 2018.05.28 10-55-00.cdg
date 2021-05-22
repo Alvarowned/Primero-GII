@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="hamatealvaroperez">
+  <ClassDiagramComponents>
+    <Class name="Carta" package="hamatealvaroperez" visibility="public" xPosition="153.0" yPosition="511.0">
+      <Fields>
+        <Field name="valor_izq" type="Integer" visibility="private" isFinal="true"/>
+        <Field name="rojo" type="Boolean" visibility="private"/>
+        <Field name="icono" type="ImageIcon" visibility="private"/>
+        <Field name="rand" type="Random" visibility="private" isFinal="true"/>
+        <Field name="valor_dcho" type="Integer" visibility="private"/>
+        <Field name="esp" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="rojo"/>
+          <Argument type="ImageIcon" name="icono"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIcono" returnType="ImageIcon" visibility="public"/>
+        <Method name="setIcono" returnType="ImageIcon" visibility="public">
+          <Argument type="ImageIcon" name="icono"/>
+        </Method>
+        <Method name="getRojo" returnType="boolean" visibility="public"/>
+        <Method name="setRojo" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="rojo"/>
+        </Method>
+        <Method name="getValorIzq" returnType="int" visibility="public"/>
+        <Method name="getValorDcho" returnType="int" visibility="public"/>
+        <Method name="getEsp" returnType="boolean" visibility="public"/>
+        <Method name="setEsp" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="esp"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="hamatealvaroperez" visibility="public" xPosition="153.0" yPosition="38.0">
+      <Fields>
+        <Field name="mano" type="ArrayList&lt;Carta&gt;" visibility="private" isFinal="true"/>
+        <Field name="rojo" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="rojo"/>
+          <Argument type="MazoDeCartas" name="mazo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRojo" returnType="boolean" visibility="public"/>
+        <Method name="getMano" returnType="ArrayList" visibility="public"/>
+        <Method name="getManoCarta" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="setManoCarta" returnType="Carta" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="Carta" name="c"/>
+        </Method>
+        <Method name="resetMano" returnType="MazoDeCartas" visibility="public">
+          <Argument type="MazoDeCartas" name="mazo"/>
+        </Method>
+        <Method name="setRojo" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="rojo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JugadorException  " package="hamatealvaroperez" visibility="public" xPosition="943.0" yPosition="932.0">
+      <Fields>
+        <Field name="NOMBRE_NO_EXISTE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="APELLIDO_NO_EXISTE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="NIF_NO_INTRODUCIDO" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="COLOR_NO_SELECCIONADO" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="DIFICULTAD_NO_SELECCIONADA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="FECHA_NO_INTRODUCIDA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="FECHA_INCORRECTA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="POS_TABL_NO_SELECCIONADA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="NIF_INCORRECTO" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="EDAD_INCORRECTA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="CARTA_NO_SELECCIONADA" type="String" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="txt"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="JugadorMaquina  " package="hamatealvaroperez" visibility="public" xPosition="1500.0" yPosition="38.0">
+      <Fields>
+        <Field name="dificil" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="rojo"/>
+          <Argument type="MazoDeCartas" name="mazo"/>
+          <Argument type="boolean" name="dificil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDificil" returnType="boolean" visibility="public"/>
+        <Method name="setDificil" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="dificil"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JugadorUsuario  " package="hamatealvaroperez" visibility="public" xPosition="1233.0" yPosition="292.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private" isFinal="true"/>
+        <Field name="fecha_nac" type="LocalDate" visibility="private" isFinal="true"/>
+        <Field name="punt" type="Integer" visibility="private"/>
+        <Field name="rival" type="JugadorMaquina" visibility="private"/>
+        <Field name="tabl" type="Tablero  " visibility="private"/>
+        <Field name="puntosPorPartida" type="ArrayList&lt;Integer&gt;" visibility="private" isFinal="true"/>
+        <Field name="apellidos" type="String" visibility="private"/>
+        <Field name="nif" type="String" visibility="private"/>
+        <Field name="jugadas" type="Integer" visibility="private"/>
+        <Field name="ganadas" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="rojo"/>
+          <Argument type="MazoDeCartas" name="mazo"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="nif"/>
+          <Argument type="LocalDate" name="fecha_nac"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="getNIF" returnType="String" visibility="public"/>
+        <Method name="getFechaNac" returnType="LocalDate" visibility="public"/>
+        <Method name="setPunt" returnType="int" visibility="public">
+          <Argument type="int" name="punt"/>
+        </Method>
+        <Method name="getPunt" returnType="int" visibility="public"/>
+        <Method name="incremPunt" returnType="int" visibility="public">
+          <Argument type="int" name="increm"/>
+        </Method>
+        <Method name="getRival" returnType="JugadorMaquina  " visibility="public"/>
+        <Method name="setRival" returnType="JugadorMaquina" visibility="public">
+          <Argument type="JugadorMaquina" name="rival"/>
+        </Method>
+        <Method name="getTablero" returnType="Tablero  " visibility="public"/>
+        <Method name="setTablero" returnType="Tablero  " visibility="public">
+          <Argument type="Tablero" name="tabl"/>
+        </Method>
+        <Method name="getJugadas" returnType="int" visibility="public"/>
+        <Method name="sumarJugada" returnType="void" visibility="public"/>
+        <Method name="getGanadas" returnType="int" visibility="public"/>
+        <Method name="sumarGanada" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MazoDeCartas  " package="hamatealvaroperez" visibility="public" xPosition="661.0" yPosition="483.0">
+      <Fields>
+        <Field name="mazo" type="ArrayList&lt;Carta&gt;" visibility="private" isFinal="true"/>
+        <Field name="rand" type="Random" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getMazo" returnType="ArrayList" visibility="public"/>
+        <Method name="getRandCarta" returnType="boolean" visibility="public">
+          <Argument type="boolean" name="rojo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ranking" package="hamatealvaroperez" visibility="public" xPosition="1405.0" yPosition="1084.0">
+      <Fields>
+        <Field name="rank" type="HashMap&lt;String, JugadorUsuario  &gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="HashMap&lt;String, JugadorUsuario&gt;" name="rank"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRank" returnType="HashMap" visibility="public"/>
+        <Method name="getRank" returnType="HashMap&lt;String, JugadorUsuario&gt;" visibility="public">
+          <Argument type="HashMap&lt;String, JugadorUsuario&gt;" name="rank"/>
+        </Method>
+        <Method name="ordenarRankMay" returnType="ArrayList" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tablero  " package="hamatealvaroperez" visibility="public" xPosition="153.0" yPosition="1046.0">
+      <Fields>
+        <Field name="tabl" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getTablCarta" returnType="int" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="setTablCarta" returnType="Carta" visibility="public">
+          <Argument type="int" name="i"/>
+          <Argument type="Carta" name="c"/>
+        </Method>
+        <Method name="tableroEstaLleno" returnType="boolean" visibility="public"/>
+        <Method name="getTabl" returnType="ArrayList" visibility="public"/>
+        <Method name="setTabl" returnType="ArrayList&lt;Carta&gt;" visibility="public">
+          <Argument type="ArrayList&lt;Carta&gt;" name="c"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tabl" source="hamatealvaroperez.Tablero  " target="hamatealvaroperez.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+    <UseRelation source="hamatealvaroperez.Jugador" target="hamatealvaroperez.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="hamatealvaroperez.JugadorMaquina  " target="hamatealvaroperez.Jugador"/>
+    <HasRelation name="mazo" source="hamatealvaroperez.MazoDeCartas  " target="hamatealvaroperez.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+    <HasRelation name="rank" source="hamatealvaroperez.Ranking" target="hamatealvaroperez.JugadorUsuario  " type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, JugadorUsuario&gt;"/>
+    <HasRelation name="tabl" source="hamatealvaroperez.JugadorUsuario  " target="hamatealvaroperez.Tablero  " type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="hamatealvaroperez.MazoDeCartas  " target="hamatealvaroperez.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="hamatealvaroperez.JugadorUsuario  " target="hamatealvaroperez.Jugador"/>
+    <UseRelation source="hamatealvaroperez.Ranking" target="hamatealvaroperez.JugadorUsuario  " sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="rival" source="hamatealvaroperez.JugadorUsuario  " target="hamatealvaroperez.JugadorMaquina  " type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mano" source="hamatealvaroperez.Jugador" target="hamatealvaroperez.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+    <UseRelation source="hamatealvaroperez.JugadorUsuario  " target="hamatealvaroperez.JugadorMaquina  " sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="hamatealvaroperez.Tablero  " target="hamatealvaroperez.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="hamatealvaroperez.JugadorUsuario  " target="hamatealvaroperez.Tablero  " sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="hamatealvaroperez.Jugador" target="hamatealvaroperez.MazoDeCartas  " sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="paqueteinterfaz">
+  <ClassDiagramComponents>
+    <Class name="Inicio" package="paqueteinterfaz" visibility="public" xPosition="37.0" yPosition="389.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="jButtonEmpezadaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonRegistroActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonNuevaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jRadioButtonRojoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonRankingActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Juego" package="paqueteinterfaz" visibility="public" xPosition="727.0" yPosition="37.0">
+      <Fields>
+        <Field name="jugU" type="JugadorUsuario" visibility="package" isStatic="true"/>
+        <Field name="jugM" type="JugadorMaquina" visibility="package" isStatic="true"/>
+        <Field name="tabl1" type="Tablero" visibility="package" isStatic="true"/>
+        <Field name="manoU" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="manoM" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="cartasTablero" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="botonesRadioU" type="ArrayList&lt;JRadioButton&gt;" visibility="package" isStatic="true"/>
+        <Field name="botonesRadioTablero" type="ArrayList&lt;JRadioButton&gt;" visibility="package" isStatic="true"/>
+        <Field name="manoUValorIzq" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="manoUValorDcha" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="manoMValorIzq" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="manoMValorDcha" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="tableroValorIzq" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="tableroValorDcho" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="manoUEsp" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="manoMEsp" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="tableroEsp" type="ArrayList&lt;JLabel&gt;" visibility="package" isStatic="true"/>
+        <Field name="rand" type="Random" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JugadorUsuario" name="j1"/>
+          <Argument type="JugadorMaquina" name="j2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="inicializarMisComponentes" returnType="void" visibility="public">
+          <Argument type="JugadorUsuario" name="j1"/>
+          <Argument type="JugadorMaquina" name="j2"/>
+        </Method>
+        <Method name="guardarPartida" returnType="void" visibility="public"/>
+        <Method name="actualizarTablero" returnType="void" visibility="public"/>
+        <Method name="comprobarBotonManoUSeleccionado" returnType="int" visibility="public"/>
+        <Method name="comprobarBotonTablSeleccionado" returnType="int" visibility="public"/>
+        <Method name="mayorCartaCompIzqU" returnType="void" visibility="public">
+          <Argument type="int" name="posC"/>
+          <Argument type="int" name="posT"/>
+        </Method>
+        <Method name="mayorCartaCompDchaU" returnType="void" visibility="public">
+          <Argument type="int" name="posC"/>
+          <Argument type="int" name="posT"/>
+        </Method>
+        <Method name="obtenerValorManoMFac" returnType="int" visibility="public"/>
+        <Method name="obtenerValorTablMFac" returnType="int" visibility="public"/>
+        <Method name="mayorCartaCompIzqM" returnType="void" visibility="public">
+          <Argument type="int" name="posC"/>
+          <Argument type="int" name="posT"/>
+        </Method>
+        <Method name="mayorCartaCompDchaM" returnType="void" visibility="public">
+          <Argument type="int" name="posC"/>
+          <Argument type="int" name="posT"/>
+        </Method>
+        <Method name="contarCartasAz" returnType="int" visibility="public"/>
+        <Method name="contarCartasRoj" returnType="int" visibility="public"/>
+        <Method name="elegirAtqIzqDif" returnType="int[]" visibility="public"/>
+        <Method name="elegirCartaMDif" returnType="int" visibility="public">
+          <Argument type="int" name="posT"/>
+          <Argument type="boolean" name="atqIzq"/>
+        </Method>
+        <Method name="jButtonReinicioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonCancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonAtacarIzqActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonAtacarDchaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonRivalAtacaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Login" package="paqueteinterfaz" visibility="public" xPosition="37.0" yPosition="37.0">
+      <Fields>
+        <Field name="entrada" type="Scanner" visibility="package"/>
+        <Field name="jugU" type="JugadorUsuario" visibility="package"/>
+        <Field name="jugM" type="JugadorMaquina" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="jTextFieldNombreActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jRadioButtonRojoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonContinuarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jFormattedTextFieldFechaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonAtrasActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RankingJug" package="paqueteinterfaz" visibility="public" xPosition="37.0" yPosition="721.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initTexto" returnType="void" visibility="public"/>
+        <Method name="jButtonAtrasActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="paqueteinterfaz.Inicio" target="paqueteinterfaz.Login" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="paqueteinterfaz.Inicio" target="paqueteinterfaz.Juego" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="paqueteinterfaz.Inicio" target="paqueteinterfaz.RankingJug" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="paqueteinterfaz.Login" target="paqueteinterfaz.Juego" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
