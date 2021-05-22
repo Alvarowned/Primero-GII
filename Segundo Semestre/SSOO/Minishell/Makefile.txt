@@ -1,0 +1,27 @@
+CFLAGS=-Wall -g
+
+all: minishell clean
+
+libshell.a: parser.o internas.o
+	ar -rs libshell.a parser.o internas.o
+
+minishell: minishell.o entrada_minishell.o ejecutar.o libmemoria.o redirecciones.o libshell.a
+	gcc $(CFLAGS) minishell.o entrada_minishell.o ejecutar.o libmemoria.o redirecciones.o libshell.a -o minishell
+
+minishell.o: minishell.c entrada_minishell.h internas.h ejecutar.h
+	gcc $(CFLAGS) -c minishell.c
+
+entrada_minishell.o: entrada_minishell.c entrada_minishell.h
+	gcc $(CFLAGS) -c entrada_minishell.c
+
+ejecutar.o: ejecutar.c ejecutar.h parser.h libmemoria.h parser.h internas.h
+	gcc $(CFLAGS) -c ejecutar.c
+
+libmemoria.o: libmemoria.c libmemoria.h
+	gcc $(CFLAGS) -c libmemoria.c
+
+redirecciones.o: redirecciones.c redirecciones.h
+	gcc $(CFLAGS) -c redirecciones.c
+
+clean: 
+	rm minishell.o entrada_minishell.o ejecutar.o libmemoria.o redirecciones.o libshell.a
